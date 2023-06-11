@@ -1,0 +1,40 @@
+<?php
+
+
+/**
+ * @package Hello_Dolly
+ * @version 1.7.2
+ */
+/*
+Plugin Name: wp-ui-theme
+Plugin URI: http://ala.org.ir
+Description: this is ui short code for use theme.
+Author: Vahid Rezaei
+Version: 1.0.0
+Author URI: 
+*/
+
+/**
+ * page_title: The title of the page.
+ * menu_title: Menu title that will be displayed on the dashboard.
+ * capability: Minimum capability to view the menu.
+ * menu_slug: Unique name used for the menu item.
+ * function:  Used to display page content.
+ * icon_url: URL to custom image used as an icon.
+ * position: Location in the menu order.
+ * add_menu_page($page_title, $menu_title, $capability, $menu_slug, $function, $icon_url, $position);
+ */
+
+ defined('ABSPATH') || die('Can\t access to config...'  );
+
+ if (file_exists(dirname(__FILE__).'/vendor/autoload.php')) {
+  require_once dirname(__FILE__).'/vendor/autoload.php';
+ }
+
+ define('PLUGIN_PATH',plugin_dir_path(__FILE__));
+ define('PLUGIN_URL',plugin_dir_url(__FILE__));
+use Inc\Base\Active;
+use Inc\Base\Deactivate;
+if (class_exists('Inc\\Init')) {
+  Inc\Init::register_services();
+}

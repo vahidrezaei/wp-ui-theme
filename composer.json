@@ -1,0 +1,17 @@
+{
+    "name": "vahid/wp-ui-theme",
+    "description": "wp plugin",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "wp-ui-theme",
+            "email": "vahidrezaei.sh@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {"Inc\\":"./inc"}
+    }
+}
