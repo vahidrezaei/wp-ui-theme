@@ -1,6 +1,8 @@
 <?php
 namespace Inc\Page;
-class PostList 
+use Inc\Base\BaseController;
+
+class PostList  extends BaseController
 {
    
     function register(){
@@ -16,6 +18,6 @@ class PostList
        }
    
        function adminView(){
-         require_once PLUGIN_PATH.'view/componentList.php';
+         require_once $this->plugin_path.'view/componentList.php';
        }
 }

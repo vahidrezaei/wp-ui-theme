@@ -4,7 +4,7 @@ final class Init{
     public static function get_service(){
         return [
             Base\Enqueue::class,
-            Page\ComponentList::class,
+            Page\Admin::class,
         ];
     }
     public static function register_services(){

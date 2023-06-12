@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'vahid/wp-ui-theme',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => '8df7ceda58491909c1730a76d8c846e806b51c38',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -11,9 +11,9 @@
     ),
     'versions' => array(
         'vahid/wp-ui-theme' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => '8df7ceda58491909c1730a76d8c846e806b51c38',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),

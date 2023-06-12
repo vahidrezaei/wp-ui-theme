@@ -31,10 +31,21 @@ Author URI:
   require_once dirname(__FILE__).'/vendor/autoload.php';
  }
 
- define('PLUGIN_PATH',plugin_dir_path(__FILE__));
- define('PLUGIN_URL',plugin_dir_url(__FILE__));
-use Inc\Base\Active;
-use Inc\Base\Deactivate;
+
+
+ /* ACTIVE & DEACTIVATE ***************/
+function activate_wp_theme_plugin(){
+	\Inc\Base\Active::activate();
+}
+function deactivate_wp_theme_plugin(){
+	\Inc\Base\Deactivate::deactivate();
+}
+ register_activation_hook(__FILE__,'activate_wp_theme_plugin');
+ register_deactivation_hook(__FILE__,'deactivate_wp_theme_plugin');
+/* ACTIVE & DEACTIVATE ***************/
+
+
+
 if (class_exists('Inc\\Init')) {
   Inc\Init::register_services();
 }
