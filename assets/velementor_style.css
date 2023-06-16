@@ -41,6 +41,18 @@
     /* 		  animation-duration: 0.2s; */
     /*   animation-name: blur_btn; */
 }
+
+.fix-social .bale {
+    background-image: url(https://ala.org.ir/fa/wp-content/uploads/2023/05/social.png);
+    background-repeat: no-repeat;
+    background-position: 0px -279px;
+    background-size: 35px;
+
+}
+.fix-social .bale:hover {
+    
+    background-position: 0px -313px;
+}
 .fix-social .roubika{
     background-image:url(https://haramzeinabie.ir/fa/shykredr/2023/03/social.png);
     background-position: 0px -70px;

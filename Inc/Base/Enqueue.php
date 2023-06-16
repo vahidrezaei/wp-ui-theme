@@ -10,7 +10,7 @@ namespace Inc\Base;
     public function enqueue(){
         wp_enqueue_style('bootstrapCss',$this->plugin_url.'/assets/bootstrap/bootstrap.rtl.min.css');
         wp_enqueue_style('fontCss',$this->plugin_url.'/assets/fonts/font.css','bootstrapCss');
-        wp_enqueue_style('styleCss',$this->plugin_url.'/assets/style.css','fontCss');
+        wp_enqueue_style('styleCss',$this->plugin_url.'/assets/velementor_style.css','fontCss');
         wp_enqueue_script('bootstrapJs',$this->plugin_url.'/assets/bootstrap/bootstrap.min.js');
 
         

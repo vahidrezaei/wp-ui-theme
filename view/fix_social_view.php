@@ -1,7 +1,7 @@
 <?php
 
 global $wpdb;
-$row = $wpdb->get_row("SELECT * FROM ala_haram.ala_social_icon order by id desc limit 1");
+$row = $wpdb->get_row("SELECT * FROM ala_social_icon order by id desc limit 1");
 
 
 if ($_POST){
@@ -29,8 +29,8 @@ VALUES (%d, %s,  %s,  %s,  %s,  %s, %s)",$active,$eita,$telegram,$instagram,$bal
             <form action="" method="post" >
             <div class="mb-3">
                 <select class="form-select" name="active" id="active">
-                    <option <?= @$row->active=='1' ? 'selected' : '' ?>  value="1">نمایش</option>
-                    <option <?= @$row->active=='0' ? 'selected' : '' ?> value="0">عدم نمایش</option>
+                    <option <?= @$row->active==1 ? 'selected' : '' ?>  value="1">نمایش</option>
+                    <option <?= @$row->active==0 ? 'selected' : '' ?> value="0">عدم نمایش</option>
                 </select>
             </div>
             <div class="mb-3">
