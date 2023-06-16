@@ -1,0 +1,89 @@
+/*****START FIX_SOCIAL***/
+.fix-social{
+    position:fixed;
+    top:30%;
+    left:0px;
+    width: 50px;
+    background-color: #f3f3f3;
+    border-radius: 0px 30px 30px 0;
+    padding:10px 0;
+    z-index:100;
+}
+.fix-social div{
+    width: 35px;
+    height: 35px;
+    margin:5px auto;
+    transition:0.2s;
+    background-repeat:no-repeat;
+    animation-iteration-count: infinite;
+}
+@keyframes blur_btn {
+    from {
+        filter: blur(13.85px) ;
+        -webkit-filter: blur(13.85px) ;
+        -moz-filter: blur(13.85px) ;
+    }
+
+    to {
+        filter: blur(0.2px) ;
+        -webkit-filter: blur(0.2px) ;
+        -moz-filter: blur(0.2px) ;
+    }
+}
+.fix-social .eita{
+    background-image:url(https://haramzeinabie.ir/fa/shykredr/2023/03/social.png);
+    background-position: 0px 0px;
+
+    background-size: 35px;
+}
+.fix-social .eita:hover{
+    background-position:0px -35px;
+    /* 		  animation-duration: 0.2s; */
+    /*   animation-name: blur_btn; */
+}
+.fix-social .roubika{
+    background-image:url(https://haramzeinabie.ir/fa/shykredr/2023/03/social.png);
+    background-position: 0px -70px;
+    background-size: 35px;
+}
+.fix-social .roubika:hover{
+    background-position:0px -105px;
+    /* 	  animation-duration: 0.2s; */
+    /*   animation-name: blur_btn; */
+}
+
+.fix-social .aparat{
+    background-image:url(https://haramzeinabie.ir/fa/shykredr/2023/03/social.png);
+    background-position: 0px -139px;
+    background-size: 35px;
+    height:34px;
+}
+.fix-social .aparat:hover{
+    background-position:0px -173px;
+    /* 	  animation-duration: 0.2s; */
+    /*   animation-name: blur_btn; */
+}
+.fix-social .insta{
+    background-image:url(https://haramzeinabie.ir/fa/shykredr/2023/03/social.png);
+    background-position: 0px -208px;
+    background-size: 35px;
+}
+.fix-social .insta:hover{
+    background-position:0px -244px;
+    /* 	  animation-duration: 0.2s; */
+    /*   animation-name: blur_btn; */
+}
+
+.fix-social .telegram{
+    background-image:url(https://haramzeinabie.ir/fa/shykredr/2023/03/social.png);
+    background-position: 0px -279px;
+    background-size: 35px;
+    height:34px
+}
+.fix-social .telegram:hover{
+    background-position:0px -313px;
+    /* 	  animation-duration: 0.2s; */
+    /*   animation-name: blur_btn; */
+}
+
+/*****END FIX_SOCIAL***/

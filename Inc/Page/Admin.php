@@ -4,6 +4,7 @@ namespace Inc\Page;
 
 use Inc\Api\settingApi;
 use Inc\Base\BaseController;
+;
 use JetBrains\PhpStorm\Pure;
 
 
@@ -12,8 +13,18 @@ class Admin extends BaseController {
 	public array $pages;
 	public $subpages;
 
-	public function __construct() {
+
+
+	function register() {
+
 		$this->setting = new settingApi();
+		$this->setPage();
+		$this->setSubPage();
+
+		//افزودن منو
+		$this->setting->addPages( $this->pages )->withSubPage('لیست کامپوننت ها')->addSubPages($this->subpages)->register();
+	}
+	public function setPage(){
 		$this->pages =[
 			[
 				'page_title' => 'لیست کامپوننت ها',
@@ -21,39 +32,49 @@ class Admin extends BaseController {
 				'capability' => 'manage_options',
 				'menu_slug'  => 'wp-velemtor-list',
 				'callback'   => function () {
-					echo 'component list';
+					return require_once ($this->plugin_path.'/view/admin_view.php');
 				},
 				'icon_url'   => 'dashicons-schedule',
-				'position'   => 110
+				'position'   => 110,
+				'short_code'=>null
+				
 			],
 
 		];
+	}
+	public function setSubPage(){
 		$this->subpages =[
 			[
 				'parent_slug' => 'wp-velemtor-list',
-				'page_title' => 'لیست پست ها',
-				'menu_title' => 'لیست پست ها',
+				'page_title' => ' پست ها',
+				'menu_title' => ' پست ها',
 				'capability' => 'manage_options',
 				'menu_slug'  => 'wp-velemtor-post',
 				'callback'   =>   function () {
-					echo 'post list';
+					return require_once($this->plugin_path.'/view/post_view.php');
 				},
 
+			],
+			[
+				'parent_slug' => 'wp-velemtor-list',
+				'page_title' => 'آیکون مراکز',
+				'menu_title' => 'آیکون مراکز',
+				'capability' => 'manage_options',
+				'menu_slug'  => 'wp-velemtor-icon',
+				'callback'   =>   function () {
+					return require_once($this->plugin_path.'/view/markaz_icon_view.php');
+				},
+			],
+			[
+				'parent_slug' => 'wp-velemtor-list',
+				'page_title' => 'شبکه اجتماعی',
+				'menu_title' =>'شبکه اجتماعی',
+				'capability' => 'manage_options',
+				'menu_slug'  => 'wp-velemtor-social',
+				'callback'   =>   function () {
+					return require_once($this->plugin_path.'/view/fix_social_view.php');
+				},
 			]
 		];
 	}
-
-	function register() {
-		//افزودن منو
-//        add_action('admin_menu',array($this,'adminPage'));
-		$this->setting->addPages( $this->pages )->withSubPage('dashboard')->addSubPages($this->subpages)->register();
-	}
-
-//       function adminPage(){
-//         add_menu_page('لیست کامپوننت ها', 'آلا ولمنتور', 'manage_options', 'wp-velemtor-list', array($this,'adminView'), 'dashicons-schedule');
-//       }
-//
-//       function adminView(){
-//         require_once $this->plugin_path.'view/componentList.php';
-//       }
 }

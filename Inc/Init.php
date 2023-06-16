@@ -7,8 +7,25 @@ final class Init{
             Page\Admin::class,
         ];
     }
+    public static function get_shortcode(){
+        return [
+            Shortcode\AlaPostList::class,
+            Shortcode\AlaFixSocial::class,
+        ];
+    }
     public static function register_services(){
         foreach (self::get_service() as $class) {
+            $service = self::instantiate($class);
+            if(method_exists($service,'register')){
+            
+                $service->register();
+            }
+        }
+    }
+
+   
+    public static function register_shortcode(){
+        foreach (self::get_shortcode() as $class) {
             $service = self::instantiate($class);
             if(method_exists($service,'register')){
             
@@ -21,4 +38,6 @@ final class Init{
         $service = new $class();
         return $service;
     }
+
+
 }

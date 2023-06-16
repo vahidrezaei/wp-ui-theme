@@ -5,6 +5,9 @@
  * @package Hello_Dolly
  * @version 1.7.2
  */
+
+use Inc\Shortcode\AlaPostList;
+
 /*
 Plugin Name: wp-ui-theme
 Plugin URI: http://ala.org.ir
@@ -48,4 +51,6 @@ function deactivate_wp_theme_plugin(){
 
 if (class_exists('Inc\\Init')) {
   Inc\Init::register_services();
+  Inc\Init::register_shortcode();
 }
+
