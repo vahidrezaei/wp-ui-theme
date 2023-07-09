@@ -74,6 +74,16 @@ class Admin extends BaseController {
 				'callback'   =>   function () {
 					return require_once($this->plugin_path.'/view/fix_social_view.php');
 				},
+			],
+			[
+				'parent_slug' => 'wp-velemtor-list',
+				'page_title' => 'کمپین ها',
+				'menu_title' =>'کمپین ها',
+				'capability' => 'manage_options',
+				'menu_slug'  => 'wp-velemtor-campaign',
+				'callback'   =>   function () {
+					return require_once($this->plugin_path.'/view/campaign_view.php');
+				},
 			]
 		];
 	}

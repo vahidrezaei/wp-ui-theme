@@ -12,7 +12,7 @@ class AlaFixSocial {
 	public function ala_fix_social() {
 		global $wpdb;
 		$row = $wpdb->get_row("SELECT * FROM ala_social_icon order by id desc limit 1");
-if ($row->active == '1'){
+if (isset($row->active) && $row->active == '1'){
 
 		ob_start();
 		?>

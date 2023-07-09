@@ -8,6 +8,7 @@
                 <a href="?page=wp-velemtor-icon" class="list-group-item list-group-item-action">آیکون های مرکز</a>
                 <a href="?page=wp-velemtor-post" class="list-group-item list-group-item-action">لیست پست ها</a>
                 <a href="?page=wp-velemtor-social" class="list-group-item list-group-item-action">شبکه های اجتماعی</a>
+                <a href="?page=wp-velemtor-campaign" class="list-group-item list-group-item-action">کمپین ها</a>
 
             </ul>
 

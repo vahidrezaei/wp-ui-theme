@@ -34,7 +34,7 @@ Author URI:
   require_once dirname(__FILE__).'/vendor/autoload.php';
  }
 
-
+$perfix = "fadak_";
 
  /* ACTIVE & DEACTIVATE ***************/
 function activate_wp_theme_plugin(){
